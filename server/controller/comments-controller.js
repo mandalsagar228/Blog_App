@@ -1,4 +1,3 @@
-import { response } from "express";
 import comments from "../models/comments.js";
 
 export const newComment = async (request, response) => {

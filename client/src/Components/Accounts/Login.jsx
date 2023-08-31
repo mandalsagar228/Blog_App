@@ -27,6 +27,7 @@ const Wrapper = styled(Box)`
   }
   .btnL {
     margin-top: 10px;
+    margin-bottom: 10px;
   }
   .btnC {
     margin-top: 10px;
@@ -211,10 +212,10 @@ const Login = ({ isUserAuthenticated }) => {
               variant="standard"
               label="Enter Email"
             ></TextField>
-            <LoginBtn className="btnC" variant="text">
+            {/* <LoginBtn className="btnC" variant="text">
               Login
-            </LoginBtn>
-            <Typography className="typogarphy">OR</Typography>
+            </LoginBtn> */}
+            {/* <Typography className="typogarphy">OR</Typography> */}
             {error && <Error>{error}</Error>}
 
             <SignupButton onClick={signupUser}>Signup</SignupButton>

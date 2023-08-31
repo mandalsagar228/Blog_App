@@ -2,6 +2,7 @@ import { Box, TextareaAutosize, Button, styled } from "@mui/material";
 import { useState, useContext, useEffect } from "react";
 import { dataContext } from "../../../Context/dataProvider";
 import { API } from "../../service/api";
+import SingleComment from "./SingleComment";
 
 const Container = styled(Box)`
   margin-top: 100px;
@@ -42,6 +43,8 @@ export const Comment = ({ post }) => {
 
   const postComment = async () => {
     let response = await API.postCommentData(comment);
+    console.log("comment res:", response);
+    setComment(" ");
     if (response.isSuccess) {
     }
   };
@@ -51,7 +54,7 @@ export const Comment = ({ post }) => {
       const response = await API.getAllComment(post._id);
       if (response.isSuccess) {
         setAllComment(response.data);
-        console.log("This is response from getData", response.data);
+        console.log("This is response from getData", allcomment);
       }
     };
     getData();
@@ -77,6 +80,10 @@ export const Comment = ({ post }) => {
           Post
         </Button>
       </Container>
+
+      <Box>
+        <SingleComment allcomment={allcomment} />
+      </Box>
     </Box>
   );
 };

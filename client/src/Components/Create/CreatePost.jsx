@@ -98,7 +98,7 @@ const CreatePost = () => {
     if (response.isSuccess) {
       console.log("Data has been save successfully");
       post.picture = "";
-      await navigate("/");
+      navigate("/");
     } else {
       console.log("Something went wrong. please try again later.");
     }

@@ -3,7 +3,7 @@ import { API_NOTIFICATION_MESSAGES, SERVICE_URL } from "../../constants/config";
 import { getAccessToken, getType } from "../../utils/common-utils";
 
 // Creating common api
-const API_URL = "http://localhost:8000";
+const API_URL = "http://localhost:8700";
 
 const axiosInstance = axios.create({
   baseURL: API_URL,
