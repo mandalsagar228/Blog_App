@@ -19,7 +19,6 @@ const signupUser = async (request, response) => {
     await newUser.save();
     console.log(newUser);
     return response.status(200).json(newUser);
-    //   .json({ msg: "Signup Successfull", data: newUser });
   } catch (error) {
     console.log(error);
     return response.status(500).json({ msg: "error while signing up", error });
